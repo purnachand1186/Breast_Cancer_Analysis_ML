@@ -66,6 +66,7 @@ Class distribution: 357 benign, 212 malignant
 #### Methodology
 Data Collection and Preprocessing: Gather and preprocess mammogram images and associated clinical data from the UC Berkeley dataset (Seaborn Breast Cancer dataset), data was cleaned, and outliers were removed from a few columns. 
 
+![DealerImage](images/confusion_matrix.jpeg)
 
 Algorithm Training and Validation: Train the Mirai algorithm on the dataset and validate its performance using cross-validation techniques.
 
