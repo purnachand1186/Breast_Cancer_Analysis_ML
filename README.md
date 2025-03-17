@@ -4,6 +4,11 @@
 
 This capstone project aims to leverage the UC Irvine breast cancer dataset to evaluate and enhance the predictive capabilities of the Machine Learning algorithms, trying the data with a deep learning model designed to assess breast cancer risk from mammogram images. The project focuses on analyzing the data, data cleaning, reducing false positives and negatives, and ensuring equitable healthcare outcomes across diverse populations.
 
+Jupyter Notebook '1_Exploratary_Data_Analysis_Breast_Cancer.ipynb' provides the exploratory data analysis, feature importance and base model scores
+Jupyter Notebook '2_Evaluation_ML_Breast_Cancer.ipynb' provides executions of ML models and their scores
+
+NOTE: Jupyter Notebook '3_FUTURE_Evaluation_NLP_Breast_Cancer_Images' is for continuous future work
+
 ### Goals
 
 **Data Preprocessing:**
