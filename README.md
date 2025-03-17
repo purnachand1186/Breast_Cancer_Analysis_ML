@@ -64,11 +64,69 @@ j) fractal dimension ("coastline approximation" - 1)
 Class distribution: 357 benign, 212 malignant
 
 #### Methodology
-Data Collection and Preprocessing: Gather and preprocess mammogram images and associated clinical data from the UC Berkeley dataset (Seaborn Breast Cancer dataset), data was cleaned, and outliers were removed from a few columns. 
+Data Collection and Preprocessing: Gather and preprocess mammogram images and associated clinical data from the UC Berkeley dataset (Seaborn Breast Cancer dataset), data was cleaned, and outliers were removed from a few columns.
 
-![DealerImage](images/confusion_matrix.jpeg)
+Target distribution in the provided data, though the provided target values have more Begign values, this should be fine.
 
-Algorithm Training and Validation: Train the Mirai algorithm on the dataset and validate its performance using cross-validation techniques.
+![Target Distribution](images/target_distribution.jpeg)
+
+Here are the feature distributions differentiated by target values.
+
+![FeatureDistributions](images/feature_distribution_histograms.jpeg)
+
+Found outliers in features like radius error, perimeter error, and area error. removed the outliers using IQR.
+
+Here is the Correlation Matrix after removing outliers.
+
+![HeatMap](images/heatmap.jpeg)
+
+Normalized the data using MinMaxScaler
+
+Used 'Linear Regression' as a base model to get baseline predictions and accuracy values. it provided a precision of 0.96 and an F1 score of 0.98, the confused matrix returns the below values on the test data.
+
+The number of positive instances correctly predicted as positive (TP): 77
+The number of negative instances correctly predicted as negative (TN): 14
+The number of positive instances incorrectly predicted as negative (FN): 0
+The number of negative instances incorrectly predicted as positive (FP): 3
+
+![ConfusionMatrix](images/confusion_matrix.jpeg)
+
+When it comes to feature importance, Random Forest regression model returns the below features with highest importance.
+
+![FeatureImportance](images/feature_importance.jpeg)
+
+
+**Algorithm Training and Validation** 
+
+The below-mentioned Machine Learning Models were used
+1. Logistic Regression
+2. Decision Tree
+3. KNN
+4. Random Forest
+5. SVM
+6. Gradient Boosting
+7. Naive Bayes
+
+With just bare metals and default variables the below accuracy values for training and test data
+
+![BaseModelComparision](images/base_model_comparison.jpeg)
+
+Used Grid Search with below hyperparameters
+
+{
+    'Logistic Regression': {'classifier__C': [0.1, 1, 10,100]},
+    'Decision Tree': {'classifier__max_depth': [3,5,7,9,15]},
+    'Random Forest': {'classifier__n_estimators': [100, 200], 'classifier__max_depth': [10,20,30]},
+    'SVM': {'classifier__C': [0.1, 1, 10,100], 'classifier__kernel': ['linear', 'rbf']},
+    'KNN': {'classifier__n_neighbors': [3, 5, 7,9]},
+    'Gradient Boosting': {'classifier__n_estimators': [100, 200], 'classifier__learning_rate': [0.01, 0.1]},
+    'Naive Bayes': {}
+}
+
+With the above hyperparameters, we got the below accuracy values
+
+![AdvancedModelComparision](images/advanced_model_comparison.jpeg)
+
 
 Statistical Analysis: Conduct statistical analyses to identify key predictive factors and assess the algorithm's performance across different subgroups.
 
