@@ -32,7 +32,7 @@ Dataset Information
 
 Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe the characteristics of the cell nuclei present in the image. A few of the images can be found at http://www.cs.wisc.edu/~street/images/
 
-Separating plane described above was obtained using Multisurface Method-Tree (MSM-T) [K. P. Bennett, "Decision Tree Construction Via Linear Programming." Proceedings of the 4th Midwest Artificial Intelligence and Cognitive Science Society, pp. 97-101, 1992], a classification method which uses linear programming to construct a decision tree. Relevant features were selected using an exhaustive search in the space of 1-4 features and 1-3 separating planes.
+The separating plane described above was obtained using Multisurface Method-Tree (MSM-T) [K. P. Bennett, "Decision Tree Construction Via Linear Programming." Proceedings of the 4th Midwest Artificial Intelligence and Cognitive Science Society, pp. 97-101, 1992], a classification method which uses linear programming to construct a decision tree. Relevant features were selected using an exhaustive search in the space of 1-4 features and 1-3 separating planes.
 
 The actual linear program used to obtain the separating plane in the 3-dimensional space is that described in: [K. P. Bennett and O. L. Mangasarian: "Robust Linear Programming Discrimination of Two Linearly Inseparable Sets", Optimization Methods and Software 1, 1992, 23-34].
 
@@ -103,7 +103,8 @@ When it comes to feature importance, Random Forest regression model returns the 
 
 **Algorithm Training and Validation** 
 
-The below-mentioned Machine Learning Models were used
+#### Models Used
+
 1. Logistic Regression
 2. Decision Tree
 3. KNN
@@ -115,6 +116,8 @@ The below-mentioned Machine Learning Models were used
 With just bare metals and default variables the below accuracy values for training and test data
 
 ![BaseModelComparision](images/base_model_comparison.jpeg)
+
+Algorithm Enhancement: Implement and test modifications to the algorithm to improve its accuracy and reliability.
 
 Used Grid Search with below hyperparameters
 
@@ -133,12 +136,18 @@ With the above hyperparameters, we got the below accuracy values
 ![AdvancedModelComparision](images/advanced_model_comparison.jpeg)
 
 
-Statistical Analysis: Conduct statistical analyses to identify key predictive factors and assess the algorithm's performance across different subgroups.
-
-Algorithm Enhancement: Implement and test modifications to the algorithm to improve its accuracy and reliability.
-
-Outcome Evaluation: Evaluate the impact of the enhanced algorithm on early detection rates and health equity.
-
 #### Results
-Accuracy: Achieve High Accuracy in terms of predictability from the available ML models
+Conclusion
+Based on the results, the Logistic Regression model is the most effective for predicting breast cancer in the UC Irvine dataset, followed by KNN, and SVM. Future work involves reading breast cancer images, executing NLP models to predict the outcomes.
+
+
+
+#### Fork the repository
+Create a new branch (git checkout -b feature-branch)
+Make your changes
+Commit your changes (git commit -m 'Add some feature')
+Push to the branch (git push origin feature-branch)
+Open a pull request
+
+
 
